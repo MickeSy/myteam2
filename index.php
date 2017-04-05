@@ -16,6 +16,7 @@
 						<header>
 							<h1 class="the-title"><?php the_title(); ?> </h1>
 						</header>
+
 						<main class="the-content">
 							<?php the_excerpt(); ?>
 						</main>
@@ -29,7 +30,7 @@
 	
 			</div>
 			<div class="col-md-3">
-			//this i the sidabar
+			<?php get_sidebar(); ?>
 			</div>
 		</div>
 	</div>

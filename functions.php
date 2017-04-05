@@ -8,7 +8,17 @@ add_action('after_setup_theme', 'myteam2_setup');
 function myteam2_sidebars(){
 //REGISTRERAR SIDEBARS
 	register_sidebar(array(
-		'name'	=>	'Blog sidebar'
+		'name'	=>	'Blog sidebar',
+		'id'	=>	'blog-sidebar',
+		//vi vill att varje  widget ska vara ett listitem
+		'before_widget'	=> '<li class="widget">',
+		//stäng listitemet
+		'after_widget'	=>	'</li>',
+		//styr utseendet på widgetfälten
+		'before_title' =>	'<h2>',
+		'after_title' =>	'</h2>',
+
+		));
 }
 
 add_action('widgets_init', 'myteam2_sidebars');
@@ -17,7 +27,7 @@ function myteam2_scripts_and_styles(){
 	//Ladda Bootstrap 4
 	wp_enqueue_style( 'bootstrap4', 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css', array(),'4.0.0-alpha.6','all');
 	//ladda egna styles
-	wp_enqueue_style( 'myteam2-site', get_template_directory_uri() . '/assets/css.site.css', array('bootstrap4'),'20170404012','all');
+	wp_enqueue_style( 'myteam2-site', get_template_directory_uri() . '/assets/css/site.css', array('bootstrap4'),'20170404012','all');
 
 
 	//se till att vi får nya jquery, gammal version inbyggs i i WP
