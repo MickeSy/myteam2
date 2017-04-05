@@ -1,0 +1,24 @@
+article header {
+  margin-bottom: 1em; }
+  article header .the-title {
+    line-height: 125%; }
+
+article main.the-content {
+  line-height: 150%;
+  text-align: justify; }
+
+.sidebar .widget {
+  border-bottom: 1px dotted #000;
+  margin: 2em 0;
+  padding-bottom: 2em; }
+  .sidebar .widget:first-child {
+    margin-top: 0px; }
+  .sidebar .widget:last-child {
+    border-bottom: none; }
+  .sidebar .widget h2 {
+    font-size: 1,5em; }
+
+.site-footer {
+  margin-top: 2em;
+  padding: 1em 0;
+  background-color: #666; }

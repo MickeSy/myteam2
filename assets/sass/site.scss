@@ -1,0 +1,42 @@
+@import 'variables';
+
+
+article{
+	header{
+		margin-bottom:1em;
+		.the-title{
+			line-height:125%;
+		}
+	}
+	main.the-content{
+	line-height: 150%;
+	text-align:justify;
+	}
+}
+
+.sidebar{
+	.widget{
+		&:first-child {
+			margin-top: 0px;
+		}
+		&:last-child{
+			border-bottom: none;
+		}
+
+		h2{
+			font-size: 1,5em;
+		}
+		
+		border-bottom: 1px dotted $black;
+		margin: 2em 0;
+		padding-bottom: 2em;
+	}
+}
+
+
+.site-footer{
+	margin-top: 2em;
+	padding:1em 0;
+	background-color: $site-footer-background-color;
+}
+
