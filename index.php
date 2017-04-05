@@ -1,0 +1,44 @@
+<?php
+	get_header();
+?>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-md-9">
+				
+				<?php if (have_posts()){
+					while(have_posts()){
+						the_post(); ///laddar info för posten vi är på
+					?>
+
+						<article class="post">
+						
+						<header>
+							<h1 class="the-title"><?php the_title(); ?> </h1>
+						</header>
+						<main class="the-content">
+							<?php the_excerpt(); ?>
+						</main>
+						</article>
+					<?php 
+					}
+				} else {
+					_e("Sorry,couldnt find any posts for you", "myteam2");
+				}
+				?>
+	
+			</div>
+			<div class="col-md-3">
+			//this i the sidabar
+			</div>
+		</div>
+	</div>
+
+<?php
+	get_footer();
+?>
+
+
+	
+
+	
