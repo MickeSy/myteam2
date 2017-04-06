@@ -1,3 +1,16 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:300,400,700,900");
+body {
+  font-family: 'Lato', sans-serif; }
+
+img {
+  max-width: 100%;
+  height: auto; }
+
+.featured-image {
+  background-size: cover;
+  background-position: center center;
+  min-height: 450px; }
+
 article header {
   margin-bottom: 1em; }
   article header .the-title {
@@ -21,4 +34,15 @@ article main.the-content {
 .site-footer {
   margin-top: 2em;
   padding: 1em 0;
-  background-color: #666; }
+  background-color: #0A395C;
+  color: white;
+  font-weight: light; }
+
+.site-header {
+  background-color: #E1E2DD; }
+
+.custom-logo {
+  position: left; }
+
+.navbar-toggle div {
+  padding-left: 0; }

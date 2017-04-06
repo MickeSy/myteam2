@@ -1,5 +1,18 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700,900');
 @import 'variables';
+@import 'typography';
 
+
+img{
+	max-width:100%;
+	height:auto;
+}
+
+.featured-image{
+	background-size:cover;
+	background-position: center center;
+	min-height:450px;
+}
 
 article{
 	header{
@@ -38,5 +51,20 @@ article{
 	margin-top: 2em;
 	padding:1em 0;
 	background-color: $site-footer-background-color;
+	color:white;
+	font-weight:light;
 }
 
+.site-header{
+	background-color: $site-header-background-color;
+}
+
+.custom-logo{
+	position:left;
+}
+
+.navbar-toggle {
+	div{
+	padding-left:0;
+	}
+}

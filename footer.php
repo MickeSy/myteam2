@@ -2,7 +2,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-6">
-						hello
+						<?php get_bloginfo(); ?>
 					</div>
 					<div class="col-md-6 text-right">
 					myteam2 a wp-theme by Mikael Sylvander, &copy; 2017

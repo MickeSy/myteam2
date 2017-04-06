@@ -18,13 +18,13 @@
 						</header>
 
 						<main class="the-content">
-							<?php the_excerpt(); ?>
+							<?php the_content(); ?>
 						</main>
 						</article>
 					<?php 
 					}
 				} else {
-					_e("Sorry,couldnt find any posts for you", "myteam2");
+					_e("Sorry,couldnt find any content for you", "myteam2");
 				}
 				?>
 	

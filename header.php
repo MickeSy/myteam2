@@ -13,20 +13,63 @@
 		
 	</head>
 	<body <?php echo body_class(); ?> >
+	<div class="container">
+		
+		<div class="row">
+			<div class="col-md-12" <?php if(has_custom_header()){
+					get_custom_header();
+						}
+						else{
+												}
+						?> >
+				
+
+				<?php if (has_custom_logo()){			//does page have logo, otherwise use the thtile for the "project"
+						the_custom_logo();
+						}else{
+						echo get_bloginfo('<h1>' . 'name' . '</h1>');
+						}; 
+						?>
+
+						
+
+				
+ 
+
+
+</div>
+</div>
+</div>
+
+
+
+
 		<div class="navbar-wrapper">	
 			<nav class="navbar navbar-toggleable-md navbar-light bg-faded">
 				<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
 				</button>
 				<div class="container">
-					<a class="navbar-brand" href="#">Myteam</a>
-					<div class="collapse navbar-collapse" id="navbarNavDropdown">
-						<ul class="navbar-nav">
-							<li class="nav-item active">
-								<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-							</li>
-						</ul>
-					</div>
-				</div> <!--container-->
+					<a class="navbar-brand" href="<?php bloginfo('url'); ?>">  
+
+				<?php	
+				wp_nav_menu( array(
+					'theme-location'	=> 'primary_menu',
+					'container'			=>	'div',
+					'container_class'	=> 'collapse navbar-collapse',
+					'container_id'		=>	'navbarNavDropdown',
+					'menu_class'		=>	'navbar-nav',
+					'fallback_cb'		=>	'__return_false',
+					'items_wrap'		=> '<ul id="%1$s" class="%2$s ml-auto">%3$s</ul>',  
+					'depth'				=> 2,
+					'walker'			=> new bootstrap_4_walker_nav_menu(),   
+			));
+		?>
+	
+				
+				</div>
 			</nav>
 		</div>
+		</div>
+			</div>
+				
