@@ -1,62 +1,57 @@
 <?php
 
-get_header(); ?>
-<article>
-	<div class="container">
-		<div class = "row">
-			<div class = "col-md-10 offset-md-1">
-				<div id="container">
-					<div id="content" role="main">
-						
+	get_header(); 
+?>
+	
+	<article>
+		<div class="container">
+			<div class = "row">
+				<div class = "col-md-10 offset-md-1">
+					<div id="container">
+						<div id="content" role="main">
+							
+							<?php				
+							if (have_posts()){
+									while(have_posts()){
+								}
+							?>
 
-					<?php get_search_form();
+								<ul>
+									<h2> <?php the_title(); ?> </h2>
+        
+            						<?php
+						                if (has_post_thumbnail()){
+						                    the_post_thumbnail();
+						                } 
+						            ?>
+    
+						            <div class="post-meta">
+						                Author: <?php the_author(); ?> | Created: <?php the_date(); ?>
+						            </div>
+						    
+						            <?php
+						                the_excerpt();
+						            ?>
+        
+									
+								 </ul>
+								 <hr/>
 
-						 if (have_posts()){
-					while(have_posts()){
-						the_post(); ?> <!--laddar info för posten vi är på-->
-						
-
-
-						<h2 class="entry-title"><?php the_title(); ?></h2>
-						<div>
-						<?php the_excerpt();?> 
-						<hr />
-						
-					</div>
-					<?php } }else {
-					_e("Sorry,couldnt find any content for you", "myteam2");
-				}
-
-					?>
-
-						
-
-
-						<h2>...per månad:</h2>
-						<ul>
 							<?php 
-							wp_get_archives('type=monthly'); ?>
-						 	
-						</ul>
-						
-						<h2>...per kategori:</h2>
-						<ul>
-							 <?php wp_list_categories(); ?>
-						 	
-						</ul>
-
-
-
-					 
-
-						
-						
-						
+								}else {
+									_e("Sorry,couldnt find any content for you", "myteam2");
+								}
+							?>
+						</div>	
 					</div>
 				</div>
 			</div>
-		</div><!-- #content -->
-	</div><!-- #container -->
-</article>
+		</div>
+	</article>
 
-<?php get_footer(); ?>
+
+
+
+<?php 
+	get_footer(); 
+?>

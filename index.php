@@ -6,13 +6,14 @@
 		<div class="row">
 			<div class="col-md-9">
 				
-				<?php if (have_posts()){
-					while(have_posts()){
+				<?php 
+					if (have_posts()){
+						while(have_posts()){
 						the_post(); ///laddar info för posten vi är på
-					?>
+					}
+				?>
 
-						<article class="post">
-						
+					<article class="post">
 						<header>
 							<h1 class="the-title"><?php the_title(); ?> </h1>
 						</header>
@@ -20,20 +21,23 @@
 						<main class="the-content">
 							<?php the_content(); ?>
 						</main>
-						</article>
-					<?php 
+					</article>
+				
+				<?php 
+					
+					} else {
+						_e("Sorry,couldnt find any content for you", "myteam2");
 					}
-				} else {
-					_e("Sorry,couldnt find any content for you", "myteam2");
-				}
 				?>
 	
 			</div>
-			<div class="col-md-3">
-			<?php get_sidebar(); ?>
-			</div>
+				<div class="col-md-3">
+					<?php get_sidebar(); ?>
+				</div>
 		</div>
 	</div>
+
+
 
 <?php
 	get_footer();

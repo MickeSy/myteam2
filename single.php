@@ -1,47 +1,43 @@
 <?php
-
-	get_header();
+	get_header(); 
+?>
 	
-	if (have_posts()){
-					while(have_posts()){
-						the_post(); ///laddar info för posten vi är på
-					?>
-		
-		<article class="post">
-	<div class="container">
-		<div class = "row">
-			<div class = "col-md-10 offset-md-1">
-			<header>
+	<article class="post">
+		<div class="container">
+			<div class = "row">
+				<div class = "col-md-10 offset-md-1">
+				<header>
 
-		<h1> <?php the_title(); ?> </h1>
-			
-			<?php
-    if (has_post_thumbnail()){
-      the_post_thumbnail($size = 'post-featured-image');
-      //så när vi tittar på många inlägg får vi defayult-värdet, 150x150.
-      //här styr vi över vilken storlke bilden ska ha. UNdvik hårdkodade värden.
-       } 
-    ?>
-			</header>
-
-
-		<div class="post-meta">
-        By: <?php the_author(); ?> | Created: <?php the_date(); ?>
-      </div>
-    <?php
-            the_content();
-       
-					}
-				} else {
-					_e("Sorry,couldnt find any content for you", "myteam2");
-				}
+				<?php 
+					if (have_posts()){
+						while(have_posts()){
+						the_post(); 
+						}
 				?>
+	
+					<h1> <?php the_title(); ?> </h1>
+						
+						<?php if (has_post_thumbnail()){ 
+			      			the_post_thumbnail($size = 'post-featured-image'); }		
+			      		?> <!--//choosing imagesize if post has featured image-->
+     
+       			</header>
+					<div class="post-meta">
+			        By: <?php the_author(); ?> | Created: <?php the_date(); ?>
+			      	</div>
+			    	<?php the_content();
+			
+					} else {
+						_e("Sorry,couldnt find any content for you", "myteam2");
+					}
+					?>
+    			</div>
+    		</div>
     	</div>
-    	</div>
-    	</div>
-    	</article>
+    </article>
 
-	<?php get_footer(); ?>
+<?php get_footer(); 
+?>
 
 
 

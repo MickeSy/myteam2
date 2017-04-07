@@ -27,7 +27,7 @@ a img.aligncenter {
   margin-right: auto; }
 
 body {
-  font-family: 'Lato', sans-serif; }
+  font-family: 'Lato', 'Roboto', sans-serif; }
 
 h1,
 h2,
@@ -57,7 +57,7 @@ article main.the-content {
 
 .sidebar .widget {
   border-bottom: 1px dotted #000;
-  margin: 2em 0;
+  margin: 1em 0;
   padding-bottom: 2em; }
   .sidebar .widget:first-child {
     margin-top: 0px; }
@@ -80,19 +80,20 @@ footer.site-footer {
     font-size: 1.2em; }
 
 .navbar {
-  margin-bottom: 1.5em; }
-
-.navbar {
+  margin-bottom: 1.5em;
   border-top: solid 0.5em #0A395C; }
+
+.navbar-wrapper {
+  width: 100%; }
 
 .post-meta {
   font-size: .8em; }
 
-.col-md-12 .nav {
-  background-color: #0A395C; }
-
 .entry-title {
   margin-top: .7em; }
+
+widget_pages {
+  padding-left: 15px; }
 
 @media (max-width: 768px) {
   .sidebar .widget:first-child {
@@ -104,9 +105,9 @@ footer.site-footer {
   img {
     max-width: 35%; }
   .type-page {
-    min-width: 100%; } }
+    max-width: 100%; } }
 
-.post {
+.post p {
   padding-right: 20px; }
 
 .container-fluid {
