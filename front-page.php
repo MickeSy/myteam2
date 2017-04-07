@@ -19,14 +19,7 @@
 
 						<main class="the-content">
 
-						<?php 
-						if(has_post_thumbnail()){
-							get_template_part('article-with-featured-image', '');
-							} else{
-								get_template_part('content-templates/page', '');
-							}
-
-						?>
+						
 						<?php the_content(); ?>
 						</main>
 						</article>

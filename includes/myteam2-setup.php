@@ -15,9 +15,6 @@ set_post_thumbnail_size(150, 150, false);
 
 
 // Add other useful image sizes for use through Add Media modal
-add_image_size( 'medium-width', 480 );
-add_image_size( 'medium-height', 9999, 480 );
-add_image_size( 'medium-something', 480, 480 );
 
 // Register the three useful image sizes for use in Add Media modal
 add_filter( 'image_size_names_choose', 'wpshout_custom_sizes' );

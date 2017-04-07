@@ -1,8 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Lato:300,400,700,900");
 @import url("https://fonts.googleapis.com/css?family=Roboto+Slab:400,700");
-body {
-  font-family: 'Lato', sans-serif; }
-
 img.alignright {
   float: right;
   margin: 0 0 1em 1em; }
@@ -29,6 +26,9 @@ a img.aligncenter {
   margin-left: auto;
   margin-right: auto; }
 
+body {
+  font-family: 'Lato', sans-serif; }
+
 h1,
 h2,
 h3,
@@ -53,8 +53,7 @@ article header {
     line-height: 125%; }
 
 article main.the-content {
-  line-height: 150%;
-  text-align: justify; }
+  line-height: 150%; }
 
 .sidebar .widget {
   border-bottom: 1px dotted #000;
@@ -89,3 +88,15 @@ footer.site-footer {
 
 .col-md-12 .nav {
   background-color: #0A395C; }
+
+@media (max-width: 768px) {
+  .sidebar .widget:first-child {
+    border-top: 1px dotted #000;
+    margin-top: 1em;
+    padding-top: 1.5em; } }
+
+@media (max-width: 600px) {
+  img {
+    max-width: 35%; }
+  .type-page {
+    min-width: 100%; } }

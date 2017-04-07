@@ -15,7 +15,7 @@
 	
 	<body <?php echo body_class(); ?> >
 	<div class="container-fluid">
-		 <img src="<?php header_image(); ?>" height="<?php echo get_custom_header()->height; ?>" width="<?php echo get_custom_header()->width; ?>" alt="" />
+		 <img src="<?php header_image(); ?>" <?php post_class(); ?> height="<?php echo get_custom_header()->height; ?>" width="<?php echo get_custom_header()->width; ?>" alt="" />
 		<div class="row">
 			<div class="col-md-12 nav>
 			

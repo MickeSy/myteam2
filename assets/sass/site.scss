@@ -3,28 +3,6 @@
 @import 'variables';
 @import 'typography';
 
-//basic settings for imgclasses
-
-img.alignright {float:right; margin:0 0 1em 1em}
-img.alignleft {float:left; margin:0 1em 1em 0}
-img.aligncenter {display: block; margin-left: auto; margin-right: auto}
-a img.alignright {float:right; margin:0 0 1em 1em}
-a img.alignleft {float:left; margin:0 1em 1em 0}
-a img.aligncenter {display: block; margin-left: auto; margin-right: auto}
-
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	font-family: 'Roboto Slab', serif;
-	font-weight: 700;
-}
-
-
-
 img{
 	max-width:100%;
 	height:auto;
@@ -45,7 +23,6 @@ article{
 	}
 	main.the-content{
 	line-height: 150%;
-	text-align:justify;
 	}
 }
 
@@ -97,5 +74,28 @@ footer.site-footer{
 .col-md-12 .nav{
 		background-color: $dark-blue;
 
+}
+
+
+@media (max-width: 768px) {
+  .sidebar{
+	.widget{
+		&:first-child {
+			border-top:1px dotted $black;
+			margin-top: 1em;
+			padding-top:1.5em;
+		}
+		}
+	}	
+}
+
+
+@media (max-width: 600px) {
+  img {
+    max-width: 35%;
+  }
+  	.type-page{
+  		min-width:100%;
+  	}
 }
 
