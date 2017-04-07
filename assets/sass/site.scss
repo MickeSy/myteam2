@@ -55,16 +55,18 @@ article{
 	font-weight:light;
 }
 
-.site-header{
-	background-color: $site-header-background-color;
+
+a .navlink{
+		color:white;
 }
 
-.custom-logo{
-	position:left;
+
+
+.the-meta{
+	font-size:1em;
 }
 
-.navbar-toggle {
-	div{
-	padding-left:0;
-	}
+.col-md-12 .nav{
+		background-color: $dark-blue;
+
 }

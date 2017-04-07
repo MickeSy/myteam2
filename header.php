@@ -12,46 +12,26 @@
 
 		
 	</head>
+	
 	<body <?php echo body_class(); ?> >
-	<div class="container">
-		
+	<div class="container-fluid">
+		 <img src="<?php header_image(); ?>" height="<?php echo get_custom_header()->height; ?>" width="<?php echo get_custom_header()->width; ?>" alt="" />
 		<div class="row">
-			<div class="col-md-12" <?php if(has_custom_header()){
-					get_custom_header();
-						}
-						else{
-												}
-						?> >
-				
-
-				<?php if (has_custom_logo()){			//does page have logo, otherwise use the thtile for the "project"
-						the_custom_logo();
-						}else{
-						echo get_bloginfo('<h1>' . 'name' . '</h1>');
-						}; 
-						?>
-
-						
-
-				
- 
-
-
-</div>
-</div>
-</div>
-
-
-
-
-		<div class="navbar-wrapper">	
+			<div class="col-md-12 nav>
+			
+			<div class="navbar-wrapper">	
 			<nav class="navbar navbar-toggleable-md navbar-light bg-faded">
 				<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
 				</button>
 				<div class="container">
-					<a class="navbar-brand" href="<?php bloginfo('url'); ?>">  
-
+					<a class="navbar-brand" href="<?php bloginfo('url'); ?>"> 
+							<?php if (has_custom_logo()){			//does page have logo, otherwise use the pagetitle for the "project"
+						the_custom_logo();
+						}else{
+						echo get_bloginfo('<h1>' . 'name' . '</h1>');
+						}; 
+						?>
 				<?php	
 				wp_nav_menu( array(
 					'theme-location'	=> 'primary_menu',
@@ -70,6 +50,10 @@
 				</div>
 			</nav>
 		</div>
-		</div>
+
 			</div>
+		</div>
+	</div>
+
+		
 				

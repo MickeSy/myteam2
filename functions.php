@@ -1,11 +1,11 @@
 <?php
 
-//get the setupr for the theme
+//get the setup for the theme
 
 require_once("includes/myteam2-setup.php");
 
 
-//add varipous filters
+//adding various filters
 
 require_once("includes/myteam2-filters.php");
 

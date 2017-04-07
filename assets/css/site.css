@@ -6,11 +6,6 @@ img {
   max-width: 100%;
   height: auto; }
 
-.featured-image {
-  background-size: cover;
-  background-position: center center;
-  min-height: 450px; }
-
 article header {
   margin-bottom: 1em; }
   article header .the-title {
@@ -38,11 +33,11 @@ article main.the-content {
   color: white;
   font-weight: light; }
 
-.site-header {
-  background-color: #E1E2DD; }
+a .navlink {
+  color: white; }
 
-.custom-logo {
-  position: left; }
+.the-meta {
+  font-size: 1em; }
 
-.navbar-toggle div {
-  padding-left: 0; }
+.col-md-12 .nav {
+  background-color: #0A395C; }
