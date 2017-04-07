@@ -37,7 +37,7 @@ article{
 
 		h2{
 			font-size: 1.6em;
-			color:$dark-blue;
+			color:lighten($dark-blue, 10%);
 		}
 		
 		border-bottom: 1px dotted $black;
@@ -48,15 +48,22 @@ article{
 
 
 footer.site-footer{
+	h3{
+		font-size:1.2em;
+	}	
 	min-height:80px;
 	margin: 2em 0em 0em 0em;
-	padding:1em 0em 1em 0em;
+	padding:1em 3.5em 1em 0em;
 	background-color: $site-footer-background-color;
 	color:white;
 	font-weight:100;
 	font-size:0.7em;
 	vertical-align: middle;
 }
+	
+
+
+
 
 
 .navbar{
@@ -75,7 +82,9 @@ footer.site-footer{
 		background-color: $dark-blue;
 
 }
-
+.entry-title{
+	margin-top:.7em;
+}
 
 @media (max-width: 768px) {
   .sidebar{
@@ -97,5 +106,21 @@ footer.site-footer{
   	.type-page{
   		min-width:100%;
   	}
+}
+
+.post{
+	padding-right:20px;
+}
+
+.container-fluid{
+	padding:0;
+}
+
+.site-footer{
+	ul{
+		list-style:none;
+    	padding-left:0;
+
+	}
 }
 

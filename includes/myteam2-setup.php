@@ -5,7 +5,7 @@ require_once('wp-bootstrap-navwalker.php');
 function myteam2_setup(){
 
 }
-
+//setting image size for featured image
 add_image_size('post-featured-image', 400, 9999, 'false');
 
 
@@ -13,11 +13,13 @@ add_image_size('post-featured-image', 400, 9999, 'false');
 add_theme_support('post-thumbnails');
 set_post_thumbnail_size(150, 150, false);
 
+//shows adminbar for logged in user with given authority
+if(current_user_can('edit_posts')){
+    show_admin_bar(true);
 
-
-
-
-
+  }else{
+    show_admin_bar(false);
+  }
 
 //support for site-logo
 
@@ -33,8 +35,7 @@ function myteam2_custom_logo_setup() {
 }
 
 
-
-
+//support for header image through sitebranding option in wpa-admin
 function myteam2_custom_header_setup() {
     $args = array(
 	'flex-width'    => true,
@@ -47,14 +48,14 @@ function myteam2_custom_header_setup() {
 }
 
 
-//registrera huvudmeny
+//register primary menu
 register_nav_menu('primary_menu', __('Primary Menu', 'myteam2'));
 
 add_action('after_setup_theme', 'myteam2_setup');
 
 
 function myteam2_sidebars(){
-//REGISTRERAR SIDEBARS
+//Register sidebar
 	register_sidebar(array(
 		'name'	=>	'Blog sidebar',
 		'id'	=>	'blog-sidebar',
@@ -67,13 +68,46 @@ function myteam2_sidebars(){
 		'after_title' =>	'</h2>',
 
 		));
+
+
+		//Registering widgetareas in footer
+		register_sidebar( array(
+		'name' => 'Footer Sidebar 1',
+		'id' => 'footer-sidebar-1',
+		'description' => 'Appears in the footer area',
+		'before_widget' => '<li class="widget %2$s">',
+		'after_widget' => '</li>',
+		'before_title' => '<h3 class="widget-title">',
+		'after_title' => '</h3>',
+		));
+
+
+		register_sidebar( array(
+		'name' => 'Footer Sidebar 2',
+		'id' => 'footer-sidebar-2',
+		'description' => 'Appears in the footer area',
+		'before_widget' => '<li class="widget %2$s">',
+		'after_widget' => '</li>',
+		'before_title' => '<h3 class="widget-title">',
+		'after_title' => '</h3>',
+		));
+
+
+		register_sidebar( array(
+		'name' => 'Footer Sidebar 3',
+		'id' => 'footer-sidebar-3',
+		'description' => 'Appears in the footer area',
+		'before_widget' => '<li class="widget %2$s">',
+		'after_widget' => '</li>',
+		'before_title' => '<h3 class="widget-title">',
+		'after_title' => '</h3>',
+		));
 }
 
-
-function wpdocs_after_setup_theme() {
+function myteam2_after_setup_theme() {
     add_theme_support( 'html5', array( 'search-form' ) );
 }
-add_action( 'after_setup_theme', 'wpdocs_after_setup_theme' );
+
 
 
 
@@ -84,7 +118,7 @@ function myteam2_scripts_and_styles(){
 	wp_enqueue_style( 'myteam2-site', get_template_directory_uri() . '/assets/css/site.css', array('bootstrap4'),'20170404012','all');
 
 
-	//se till att vi får nya jquery, gammal version inbyggs i i WP
+	//se till att vi får nya jquery, byt ut den gamla versionen som är inbyggd i wp
 	wp_deregister_script('jquery');
 
 	//ladda jquery
@@ -97,5 +131,4 @@ function myteam2_scripts_and_styles(){
 
 }
 
-add_action('wp_enqueue_scripts', 'myteam2_scripts_and_styles');
 

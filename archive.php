@@ -1,7 +1,5 @@
 <?php
-/*
-Template Name: Archives
-*/
+
 get_header(); ?>
 <article>
 	<div class="container">
@@ -22,7 +20,7 @@ get_header(); ?>
 						<h2 class="entry-title"><?php the_title(); ?></h2>
 						<div>
 						<?php the_excerpt();?> 
-
+						<hr />
 						
 					</div>
 					<?php } }else {
@@ -34,14 +32,14 @@ get_header(); ?>
 						
 
 
-						<h2>Arkiv per månad:</h2>
+						<h2>...per månad:</h2>
 						<ul>
 							<?php 
 							wp_get_archives('type=monthly'); ?>
 						 	
 						</ul>
 						
-						<h2>Arkiv per kategori:</h2>
+						<h2>...per kategori:</h2>
 						<ul>
 							 <?php wp_list_categories(); ?>
 						 	

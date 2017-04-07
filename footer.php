@@ -1,11 +1,32 @@
 		<footer class="site-footer">
 			<div class="container">
 				<div class="row">
-					<div class="col-md-6">
-						<?php get_bloginfo(); ?>
+					<div class="col-md-4">
+					<ul>
+					<?php
+					if(is_active_sidebar('footer-sidebar-1')){
+					dynamic_sidebar('footer-sidebar-1');
+					}
+					?>	
+					</ul>				
 					</div>
-					<div class="col-md-6 text-right">
-					myteam2 a wp-theme by Mikael Sylvander, &copy; 2017
+					<div class="col-md-4">
+					<ul>
+					<?php
+					if(is_active_sidebar('footer-sidebar-2')){
+					dynamic_sidebar('footer-sidebar-2');
+					}
+					?>
+					</ul>
+					</div>
+					<div class="col-md-4">
+					<ul>
+					<?php
+					if(is_active_sidebar('footer-sidebar-3')){
+					dynamic_sidebar('footer-sidebar-3');
+					}
+					?>
+					</ul>
 					</div>
 				</div>
 			</div>
@@ -16,3 +37,5 @@
 		?>
 	</body>
 </html>
+
+

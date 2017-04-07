@@ -65,17 +65,19 @@ article main.the-content {
     border-bottom: none; }
   .sidebar .widget h2 {
     font-size: 1.6em;
-    color: #0A395C; }
+    color: #0f568a; }
 
 footer.site-footer {
   min-height: 80px;
   margin: 2em 0em 0em 0em;
-  padding: 1em 0em 1em 0em;
+  padding: 1em 3.5em 1em 0em;
   background-color: #0A395C;
   color: white;
   font-weight: 100;
   font-size: 0.7em;
   vertical-align: middle; }
+  footer.site-footer h3 {
+    font-size: 1.2em; }
 
 .navbar {
   margin-bottom: 1.5em; }
@@ -89,6 +91,9 @@ footer.site-footer {
 .col-md-12 .nav {
   background-color: #0A395C; }
 
+.entry-title {
+  margin-top: .7em; }
+
 @media (max-width: 768px) {
   .sidebar .widget:first-child {
     border-top: 1px dotted #000;
@@ -100,3 +105,13 @@ footer.site-footer {
     max-width: 35%; }
   .type-page {
     min-width: 100%; } }
+
+.post {
+  padding-right: 20px; }
+
+.container-fluid {
+  padding: 0; }
+
+.site-footer ul {
+  list-style: none;
+  padding-left: 0; }
