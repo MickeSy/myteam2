@@ -14,18 +14,6 @@ add_theme_support('post-thumbnails');
 set_post_thumbnail_size(150, 150, false);
 
 
-// Add other useful image sizes for use through Add Media modal
-
-// Register the three useful image sizes for use in Add Media modal
-add_filter( 'image_size_names_choose', 'wpshout_custom_sizes' );
-function wpshout_custom_sizes( $sizes ) {
-    return array_merge( $sizes, array(
-        'medium-width' => __( 'Medium Width' ),
-        'medium-height' => __( 'Medium Height' ),
-        'medium-something' => __( 'Medium Something' ),
-    ) );
-}
-
 
 
 
@@ -50,7 +38,7 @@ function myteam2_custom_logo_setup() {
 function myteam2_custom_header_setup() {
     $args = array(
 	'flex-width'    => true,
-	'width'         => 1800,
+	'width'         => 1920,
 	'flex-height'    => true,
 	'height'        => 200,
 	'default-image' => get_template_directory_uri() . '/images/header.jpg',
@@ -82,7 +70,10 @@ function myteam2_sidebars(){
 }
 
 
-
+function wpdocs_after_setup_theme() {
+    add_theme_support( 'html5', array( 'search-form' ) );
+}
+add_action( 'after_setup_theme', 'wpdocs_after_setup_theme' );
 
 
 
