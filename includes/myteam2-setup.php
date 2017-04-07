@@ -6,12 +6,32 @@ function myteam2_setup(){
 
 }
 
-add_image_size('post-featured-image', 760, 9999, 'false');
+add_image_size('post-featured-image', 400, 9999, 'false');
 
 
-//stöd för featured images och post thumbnails
+//support for featured images och post thumbnails
 add_theme_support('post-thumbnails');
 set_post_thumbnail_size(150, 150, false);
+
+
+// Add other useful image sizes for use through Add Media modal
+add_image_size( 'medium-width', 480 );
+add_image_size( 'medium-height', 9999, 480 );
+add_image_size( 'medium-something', 480, 480 );
+
+// Register the three useful image sizes for use in Add Media modal
+add_filter( 'image_size_names_choose', 'wpshout_custom_sizes' );
+function wpshout_custom_sizes( $sizes ) {
+    return array_merge( $sizes, array(
+        'medium-width' => __( 'Medium Width' ),
+        'medium-height' => __( 'Medium Height' ),
+        'medium-something' => __( 'Medium Something' ),
+    ) );
+}
+
+
+
+
 
 
 //support for site-logo
@@ -23,7 +43,7 @@ function myteam2_custom_logo_setup() {
         'flex-height' => true,
         'flex-width'  => true,
         'header-text' => array( 'site-title', 'site-description' ),
-    );
+    );	
     add_theme_support( 'custom-logo', $defaults );
 }
 

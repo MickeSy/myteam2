@@ -17,7 +17,7 @@ get_header(); ?>
 				}
 					?>
 						<?php the_excerpt(); ?>
-						<h2 class="entry-title"><?php the_title(); ?></h2>
+						<h2 class="entry-title"><a href="<?php the_permalink(); ?>" title ="permalink to this post"> <?php the_title(); ?></h2>
 						
 						<?php get_search_form(); ?>
 						
