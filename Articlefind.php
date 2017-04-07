@@ -19,16 +19,11 @@ Template Name: Articlefind
 
 						
 
-						<h2>...per månad:</h2>
-							<ul>
-								<?php 
-									wp_get_archives('type=monthly'); 
-								?>
-							 </ul>
+						
 
 							 
 							
-						<h2>...per kategori:</h2>
+						<h2>Arkiv:</h2>
 							<ul>
 								 <?php wp_list_categories(); ?>
 							 </ul>						
